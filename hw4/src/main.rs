@@ -1,3 +1,4 @@
+#[derive(Debug)]
 struct MyVec<T> {
     vec: Vec<T>
 }
@@ -52,11 +53,11 @@ fn main() {
 
     println!("{:?}", vec1.pop());
     println!("{:?}", vec1.remove(1));
-    println!("{:?}", vec1.get(1)); //7
+    println!("{:?}", vec1.get(1)); // Some(7)
     println!("{:?}", vec1.get(9));  // None
 
     let mut vec2: MyVec<i32> = MyVec::with_capacity(13);
-
+    println!("{:?}", vec2);
     vec2.resize(10, 5);
     println!("{:?}", vec2);
     vec2.resize(13, 7);
